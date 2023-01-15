@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --brightYellow: hsl(71, 73%, 54%);
+  /* ### Neutral */
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--LightGray);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5em 0.5em 0 0;
+  margin: 4em 0;
+  max-width: 380px;
+}
+
+.box {
+  background: teal;
+  color: var(--LightGray);
+  text-align: center;
+  padding: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  height: 350px;
+}
+.box h1 {
+  color: var(--Cyan);
+  font-size: 1.5rem;
+}
+
+.box1 {
+  background: #fff;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.box1 .moneyback {
+  color: var(--brightYellow);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.box1 .text1 {
+  color: var(--GrayishBlue);
+  line-height: 1.5rem;
+  word-spacing: 0.3rem;
+}
+
+.box2 {
+  background: rgb(17, 192, 192);
+}
+.box2 h2,
+.box3 h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.box2 strong {
+  font-size: 2rem;
+}
+
+.permonth {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+.box2 a {
+  text-decoration: none;
+  background: var(--brightYellow);
+  padding: 1em 6em;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.3em;
+  color: #fff;
+}
+.box3 {
+  background: var(--Cyan);
+}
+.box3 p {
+  line-height: 1.5rem;
+  color: var(--LightGray);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 300px;
+    max-width: 680px;
+  }
+  .box {
+    height: auto;
+  }
+
+  .box1 {
+    grid-column: 1/3;
+  }
+}
